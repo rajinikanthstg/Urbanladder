@@ -43,7 +43,7 @@ public class Test_063 extends BaseClass{
 			click(homeObject.company.get(i));
 			test.log(Status.INFO,"clicked on "+ title);
 			List<String> windows = WindowHandles();
-			if(windows.get(0).equals(windows.getLast()))
+			if(windows.get(0).equals(windows.get(1)))
 			{
 				Assert.assertTrue(driver.getTitle().contains(titles.get(i)));
 				test.log(Status.PASS,"navigated to "+titles.get(i)+" page");
@@ -54,7 +54,7 @@ public class Test_063 extends BaseClass{
 			}
 			else
 			{
-				driver.switchTo().window(windows.getLast());
+				driver.switchTo().window(windows.get(1));
 				Assert.assertTrue(driver.getTitle().contains(titles.get(i)));
 				test.log(Status.PASS,"navigated to "+titles.get(i)+" page");
 				driver.close();
