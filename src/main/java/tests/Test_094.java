@@ -24,11 +24,11 @@ public class Test_094 extends BaseClass{
 			test.log(Status.INFO,"clicked on shop now");
 			Thread.sleep(5000);
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			Assert.assertTrue(searchResultObject.productBreadcrumb.isDisplayed());
 			test.log(Status.PASS,"navigated to product page");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());
+			driver.switchTo().window(windows.get(0));
 		}
 		catch(Exception e) {
 			test.log(Status.FAIL,"test failed");
