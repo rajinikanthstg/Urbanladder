@@ -233,13 +233,13 @@ public class Test_062 extends BaseClass{
 			click(homeObject.allStores);
 			test.log(Status.INFO,"clicked on all stores");
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			test.log(Status.INFO,"switched to child window");
 			Thread.sleep(3000);
 			Assert.assertTrue(driver.getTitle().contains("City Pages"));
 			test.log(Status.PASS,"navigated to city pages");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());
+			driver.switchTo().window(windows.get(0));
 			test.log(Status.INFO,"switched to parent window");
 		}
 		catch(Exception e) {
