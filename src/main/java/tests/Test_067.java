@@ -38,13 +38,13 @@ public class Test_067 extends BaseClass {
 				click(links.get(i));
 				test.log(Status.INFO,"clicked on "+hrefs.get(i)+" link");
 				List<String> windows = WindowHandles();
-				driver.switchTo().window(windows.getLast());
+				driver.switchTo().window(windows.get(1));
 				test.log(Status.INFO,"switched to child window");
 				Assert.assertTrue(driver.getCurrentUrl().contains(hrefs.get(i)));
 				test.log(Status.PASS,"navigated to "+hrefs.get(i)+" page");
 				driver.close();
 				test.log(Status.INFO,"closed child window");
-				driver.switchTo().window(windows.getFirst());
+				driver.switchTo().window(windows.get(0));
 				test.log(Status.INFO,"switched to parent window");
 				scrollToElement(homeObject.footerSocial);
 				test.log(Status.INFO,"scrolled to footer-social links");
