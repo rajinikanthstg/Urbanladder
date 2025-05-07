@@ -23,13 +23,13 @@ public class Test_062 extends BaseClass{
 			click(homeObject.bangloreStore);
 			test.log(Status.INFO,"clicked on Banglore");
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			test.log(Status.INFO,"switched to child window");
 			Thread.sleep(3000);
 			Assert.assertTrue(driver.getTitle().contains("Furniture Stores In Bangalore"));
 			test.log(Status.PASS,"navigated to stores in Bangalore");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());
+			driver.switchTo().window(windows.get(0));
 			test.log(Status.INFO,"switched to parent window");
 		}
 		catch(Exception e) {
@@ -70,13 +70,13 @@ public class Test_062 extends BaseClass{
 			click(homeObject.mumbaiStore);
 			test.log(Status.INFO,"clicked on Mumbai");
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			test.log(Status.INFO,"switched to child window");
 			Thread.sleep(3000);
 			Assert.assertTrue(driver.getTitle().contains("Furniture Stores In Mumbai"));
 			test.log(Status.PASS,"navigated to stores in Mumbai");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());
+			driver.switchTo().window(windows.get(0));
 			test.log(Status.INFO,"switched to parent window");
 		}
 		catch(Exception e) {
@@ -100,13 +100,13 @@ public class Test_062 extends BaseClass{
 			click(homeObject.hyderabadstore);
 			test.log(Status.INFO,"clicked on Hyderabad");
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			test.log(Status.INFO,"switched to child window");
 			Thread.sleep(3000);
 			Assert.assertTrue(driver.getTitle().contains("Furniture Stores In Hyderabad"));
 			test.log(Status.PASS,"navigated to stores in Hyderabad");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());
+			driver.switchTo().window(windows.get(0));
 			test.log(Status.INFO,"switched to parent window");
 		}
 		catch(Exception e) {
@@ -126,13 +126,13 @@ public class Test_062 extends BaseClass{
 			click(homeObject.chennaiStore);
 			test.log(Status.INFO,"clicked on Chennai");
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			test.log(Status.INFO,"switched to child window");
 			Thread.sleep(3000);
 			Assert.assertTrue(driver.getTitle().contains("Furniture Stores In Chennai"));
 			test.log(Status.PASS,"navigated to stores in Chennai");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());
+			driver.switchTo().window(windows.get(0));
 			test.log(Status.INFO,"switched to parent window");
 		}
 		catch(Exception e) {
@@ -152,13 +152,13 @@ public class Test_062 extends BaseClass{
 			click(homeObject.puneStore);
 			test.log(Status.INFO,"clicked on Pune");
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			test.log(Status.INFO,"switched to child window");
 			Thread.sleep(3000);
 			Assert.assertTrue(driver.getTitle().contains("Furniture Stores In Pune"));
 			test.log(Status.PASS,"navigated to stores in Pune");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());
+			driver.switchTo().window(windows.get(0));
 			test.log(Status.INFO,"switched to parent window");
 		}
 		catch(Exception e) {
@@ -180,14 +180,14 @@ public class Test_062 extends BaseClass{
 			click(homeObject.kolkataStore);
 			test.log(Status.INFO,"clicked on Kolkata");
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			test.log(Status.INFO,"switched to child window");
 			Thread.sleep(3000);
 			System.out.println(driver.getTitle());
 //			Assert.assertTrue(driver.getTitle().contains("Urban Ladder Furniture Store in Kolkata"));
 			test.log(Status.PASS,"navigated to stores in Kolkata");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());
+			driver.switchTo().window(windows.get(0));
 			test.log(Status.INFO,"switched to parent window");
 		}
 		catch(Exception e) {
@@ -207,13 +207,13 @@ public class Test_062 extends BaseClass{
 			click(homeObject.kochiStore);
 			test.log(Status.INFO,"clicked on Kochi");
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			test.log(Status.INFO,"switched to child window");
 			Thread.sleep(3000);
 			Assert.assertTrue(driver.getTitle().contains("Furniture Stores In Kochi"));
 			test.log(Status.PASS,"navigated to stores in Kochi");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());
+			driver.switchTo().window(windows.get(0));
 			test.log(Status.INFO,"switched to parent window");
 		}
 		catch(Exception e) {

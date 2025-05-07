@@ -30,7 +30,7 @@ public class Test_096 extends BaseClass {
 			Thread.sleep(5000);
 			List<String> windows = WindowHandles();
 			if(windows.size()==2)
-				driver.switchTo().window(windows.getLast());
+				driver.switchTo().window(windows.get(1));
 			scrollToView(driver.findElement(By.xpath("//section[@class='header__topBar_sectionLeft']")));
 			Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Weston Half Leather Sofa (Licorice Italian Leather')]")).isDisplayed());
 			test.log(Status.PASS,"product title displayed");	

@@ -32,12 +32,12 @@ public class Test_068 extends BaseClass{
 				click(downloads.get(i));
 				test.log(Status.INFO,"clicked on "+urls.get(i)+" link");
 				List<String> windows = WindowHandles();
-				driver.switchTo().window(windows.getLast());
+				driver.switchTo().window(windows.get(1));
 				test.log(Status.INFO,"switched to child window");
 				Assert.assertTrue(driver.getCurrentUrl().contains(urls.get(i)));
 				test.log(Status.PASS,"navigated to "+urls.get(i));
 				driver.close();
-				driver.switchTo().window(windows.getFirst());	
+				driver.switchTo().window(windows.get(0));
 				scrollToElement(homeObject.downloadImages);
 				test.log(Status.INFO,"scrolled to footer links");
 			}
