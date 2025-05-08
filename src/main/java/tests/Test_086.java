@@ -24,7 +24,7 @@ public class Test_086 extends BaseClass{
 			SelectByText(searchResultObject.sortOptions,"Price: High to Low");
 			Thread.sleep(2000);
 			test.log(Status.INFO,"selected high to low price range");
-			String price = searchResultObject.priceFilterOptions.getLast().getAttribute("value").split("-")[1];
+			String price = searchResultObject.priceFilterOptions.get(searchResultObject.priceFilterOptions.size()-1).getAttribute("value").split("-")[1];
 			Assert.assertTrue(searchResultObject.firstProductPrice.getAttribute("data-price").contains(price));
 			test.log(Status.PASS,"products price sorted from high to low");
 			Logout();

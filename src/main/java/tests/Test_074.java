@@ -22,12 +22,12 @@ public class Test_074 extends BaseClass{
 			click(homeObject.deliveringInLink);
 			test.log(Status.INFO,"clicked on more");
 			List<String> windows = WindowHandles();
-			driver.switchTo().window(windows.getLast());
+			driver.switchTo().window(windows.get(1));
 			test.log(Status.INFO,"switched to child window");
 			Assert.assertEquals(driver.findElement(By.xpath("//h1[@class=\"withsubtext\"]")).getText(),"Cities We Deliver In");
 			test.log(Status.PASS,"navigated to Cities We Deliver In");
 			driver.close();
-			driver.switchTo().window(windows.getFirst());			
+			driver.switchTo().window(windows.get(0));
 			test.log(Status.INFO,"switched to parent window");
 		}
 		catch(Exception e) {

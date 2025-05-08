@@ -33,6 +33,7 @@ public class AddToCompare{
 	
 	@FindBy(xpath="//*[@id=\"comparator-modal\"]/div/div[2]/div[1]/div[1]/div[3]/a")
 	public WebElement viewProduct;
+<<<<<<< HEAD
 	
 	@FindBy(xpath = "(//div[@class=\"remove-prod-cta\"])[3]")
 	public WebElement removeBtn;
@@ -45,4 +46,15 @@ public class AddToCompare{
 
 	@FindBy(xpath = "//*[@id=\"comparator-modal\"]/div/div[1]/div/a/img")
 	public WebElement logo;
+=======
+
+	@FindBy(xpath = "(//div[@class=\"remove-prod-cta\"])[3]")
+	public WebElement removeBtn;
+
+	@FindBy(xpath = "//div[@class=\"products-comparator row row-centered\"]/div")
+	public List<WebElement> productsInCompare;
+
+	@FindBy(xpath = "//div[@class=\"remove-prod-cta\"]")
+	public List<WebElement> removeInPopup;
+>>>>>>> branch 'master' of https://github.com/rajinikanthc/Urbanladder.git
 }

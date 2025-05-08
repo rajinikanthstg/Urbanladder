@@ -30,7 +30,7 @@ public class Test_097 extends BaseClass{
 			Thread.sleep(5000);
 			List<String> windows = WindowHandles();
 			if(windows.size()==2)
-				driver.switchTo().window(windows.getLast());
+				driver.switchTo().window(windows.get(1));
 			Assert.assertTrue(driver.findElement(By.cssSelector("div[id='sofaoverview-7496'] li:nth-child(2) img:nth-child(1)")).isDisplayed());
 			test.log(Status.PASS,"product image displayed");			
 		}

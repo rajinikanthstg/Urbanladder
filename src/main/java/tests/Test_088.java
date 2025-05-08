@@ -27,7 +27,7 @@ public class Test_088 extends BaseClass{
 			Thread.sleep(5000);
 			List<String> windows = WindowHandles();
 			if(windows.size()==2)
-				driver.switchTo().window(windows.getLast());
+				driver.switchTo().window(windows.get(1));
 			Assert.assertTrue(searchResultObject.productBreadcrumb.isDisplayed());
 			test.log(Status.PASS,"navigated to product page");
 		}
