@@ -67,10 +67,6 @@ public class SearchResults {
 	@FindBy(xpath = "//div[@class=\"product-info-block\"]/a/div/span[@itemprop=\"name\"]")
 	public List<WebElement> productTitles;
 
-	@FindBy(xpath = "//li[1]//div[1]//div[6]")
-	public WebElement firstProductWishIcon;
 
-	@FindBy(xpath = "//div[@class=\"product-info-block\"]/a/div/span[@itemprop=\"name\"]")
-	public List<WebElement> productTitles;
 
 }
