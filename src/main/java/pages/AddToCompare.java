@@ -42,4 +42,7 @@ public class AddToCompare{
 
 	@FindBy(xpath = "//div[@class=\"remove-prod-cta\"]")
 	public List<WebElement> removeInPopup;
+
+	@FindBy(xpath = "//*[@id=\"comparator-modal\"]/div/div[1]/div/a/img")
+	public WebElement logo;
 }
