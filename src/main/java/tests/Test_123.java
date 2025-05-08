@@ -18,7 +18,7 @@ public class Test_123 extends BaseClass{
 			test = extent.createTest("Verify That Two Different Products Of Same Category Can Be Added To Compare");
 			Login();
 			test.log(Status.INFO,"user logged in");
-			enterData(homeObject.searchBar,"lamp");
+			enterData(homeObject.searchBar,"study lamp");
 			test.log(Status.INFO,"entered lamp in search box");
 			click(homeObject.searchBtn);
 			test.log(Status.INFO,"clicked on search button");
@@ -35,7 +35,7 @@ public class Test_123 extends BaseClass{
 			test.log(Status.INFO,"clicked on second product");
 			click(productPageObject.addToCompare);
 			test.log(Status.INFO,"clicked on add to compare");
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			Assert.assertEquals(addToComparePopup.compareProducts.size(),2);
 			test.log(Status.PASS,"products added to compare");		
 		}

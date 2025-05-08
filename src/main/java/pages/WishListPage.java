@@ -12,10 +12,10 @@ public class WishListPage {
 	
 	@FindBy(xpath="//div[@class=\"compare-widget-wrapper\"]")
 	public WebElement comparePopup;
-
+	
 	@FindBy(xpath = "//div[@class=\"product-info-block\"]/a")
 	public List<WebElement> productNames;
-
+	
 	@FindBy(xpath="//div[@class=\"wishproduct wishblock\"]")
 	public List<WebElement> wishIcons;
 }

@@ -43,7 +43,7 @@ public class SearchResults {
 	@FindBy(xpath="//ul/li[@itemscope=\"itemscope\"]/span")
 	public WebElement productBreadcrumb;
 	
-	@FindBy(css="body > div:nth-child(1) > div:nth-child(4) > div:nth-child(3) > div:nth-child(2) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(1) > div:nth-child(1) > div:nth-child(14) > a:nth-child(2)")
+	@FindBy(xpath="(//a[@class=\"button\"][text()=\"View Product\"])[1]")
 	public WebElement firstProductViewBtn;
 	
 	@FindBy(xpath="//*[@id=\"search-results\"]/div[3]/ul/li[1]/div/div[3]/div[2]/a[1]")
@@ -60,6 +60,12 @@ public class SearchResults {
 	
 	@FindBy(xpath="(//a[@class=\"product-img\"])[2]")
 	public WebElement secondProductImg;
+	
+	@FindBy(xpath = "//li[1]//div[1]//div[6]")
+	public WebElement firstProductWishIcon;
+
+	@FindBy(xpath = "//div[@class=\"product-info-block\"]/a/div/span[@itemprop=\"name\"]")
+	public List<WebElement> productTitles;
 
 	@FindBy(xpath = "//li[1]//div[1]//div[6]")
 	public WebElement firstProductWishIcon;

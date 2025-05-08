@@ -51,5 +51,8 @@ public class ProductPage {
 	
 	@FindBy(css=".interlink-wrap a")
 	public List<WebElement> popularLinks;
+	
+	@FindBy(xpath="//div[@class=\"flash ulmessage error  \"]")
+	public WebElement outOfStockErr;
 
 }
