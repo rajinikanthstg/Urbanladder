@@ -9,5 +9,16 @@ public class CartPage {
 	
 	@FindBy(xpath="//*[@id=\"line_items\"]//div[@class=\"product-title\"]//a")
 	public List<WebElement> productTitles;
-
+	
+	@FindBy(xpath="//a[normalize-space()='Add to Wishlist']")
+	public List<WebElement> addToWishlist;
+	
+	@FindBy(xpath="//a[contains(text(),'Wishlist')]")
+	public WebElement wishList;
+	
+	@FindBy(css=".delivery-date")
+	public List<WebElement> deliveryDate;
+	
+	@FindBy(xpath="//select[@id=\"select_0_quantity\"]/option[@selected=\"selected\"]")
+	public List<WebElement> quantity;
 }
