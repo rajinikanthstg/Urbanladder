@@ -44,6 +44,7 @@ public class Test_125 extends BaseClass{
 			test.log(Status.INFO,"clicked on add to compare");
 			Thread.sleep(3000);
 			Assert.assertTrue(addToComparePopup.errorMessage2.isDisplayed());
+			String msg = addToComparePopup.errorMessage2.getText().replace("GOT IT","").trim();
 			test.log(Status.PASS,"error message displayed");			
 		}
 		catch(Exception e) {
