@@ -69,4 +69,37 @@ public class CartPage {
 
 	@FindBy(xpath="//ul[@id=\"account-logged-in\"]/li/a[text()=\"Track Order\"]")
 	public WebElement trackOrder;
+
+	@FindBy(xpath="//ul[@id=\"account-logged-in\"]/li[@class=\"email\"]")
+	public WebElement myAccount;
+
+	@FindBy(xpath="//ul[@class=\"no-bullet\"]/li/a/span[@class=\"text\"]")
+	public List<WebElement> myAccountOptions;
+
+	@FindBy(xpath="//ul[@class=\"no-bullet\"]/li[@class=\"signout\"]")
+	public WebElement logout;
+
+	@FindBy(xpath="//a[normalize-space()='Change Pincode']")
+	public WebElement changePincode;
+
+	@FindBy(xpath="//button[normalize-space()='CHECK']")
+	public WebElement check;
+
+	@FindBy(xpath="//input[@placeholder='YOUR PINCODE']")
+	public WebElement yourPincode;
+
+	@FindBy(xpath="//span[@class='pincode']")
+	public WebElement newPincode;
+
+	@FindBy(xpath="//ul[@class=\"delivery-charge__conditions\"]/li")
+	public WebElement deliveryInfo;
+
+	@FindBy(xpath="//ul[@class=\"message\"]/li//span[text()=\"Know More\"]")
+	public WebElement knowMore;
+
+	@FindBy(xpath="//a[normalize-space()='Help']")
+	public WebElement help;
+
+	@FindBy(xpath="//img[@alt='Urban Ladder - Online furniture store']")
+	public WebElement logo;
 }

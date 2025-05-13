@@ -41,16 +41,7 @@ import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pages.AddToCompare;
-import pages.CartPage;
-import pages.ForgotPwdPage;
-import pages.HomePage;
-import pages.LandingPage;
-import pages.LoginPopup;
-import pages.ProductPage;
-import pages.SearchResults;
-import pages.SignupPopUp;
-import pages.WishListPage;
+import pages.*;
 
 public class BaseClass extends ExcelBase {
 	
@@ -82,6 +73,9 @@ public class BaseClass extends ExcelBase {
 	public static WishListPage wishListObject = null;
 	public static AddToCompare addToComparePopup = null;
 	public static CartPage cartObject = null;
+	public static ShippingAddressPage shippingPageObject= null;
+	public static PaymentPage paymentPageObject = null;
+	public static ProfilePage profilePageObject = null;
 	
 	@BeforeSuite
 	public static void init() throws Exception
@@ -129,6 +123,9 @@ public class BaseClass extends ExcelBase {
 		wishListObject = PageFactory.initElements(driver,WishListPage.class);
 		addToComparePopup = PageFactory.initElements(driver,AddToCompare.class);
 		cartObject = PageFactory.initElements(driver,CartPage.class);
+		shippingPageObject  = PageFactory.initElements(driver,ShippingAddressPage.class);
+		paymentPageObject = PageFactory.initElements(driver, PaymentPage.class);
+		profilePageObject = PageFactory.initElements(driver,ProfilePage.class);
 		
 //		Login();
 	}
